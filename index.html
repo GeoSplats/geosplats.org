@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoSplat - 3D Gaussian Splatting Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="splat-background"></div>
+    <div class="container">
+        <header>
+            <h1>GeoSplats</h1>
+        </header>
+        <main>
+            <section>
+                <p><strong>GeoSplat</strong> is a rendering technology utilizing an optimized data format to enable the
+                    interactive, photo-realistic, high-fidelity visualization of extremely large 3D environments.</p>
+                <p>The first public implementation, demonstrating its application on massive scenes (containing billions
+                    of "splats") with streamable <strong>Levels of Detail (LODs)</strong> and the ability to compose
+                    models from geographical tiles, similar to traditional satellite maps, was recently showcased. This
+                    technology is designed to render in real-time within a web browser using <strong>WebGPU</strong>. It
+                    was presented by <a href="https://www.maptiler.com/" rel="noopener">MapTiler</a> at
+                    their <a href="https://connect.maptiler.com/" target="_blank" rel="noopener">Connect 25</a>
+                    conference, featuring
+                    demonstrations on models of San Francisco and Poland.</p>
+
+                <section class="requirements-demo">
+                    <div class="requirements-content">
+                        <p>The GeoSplat demo requires a modern browser with <strong>WebGPU support</strong>. Performance
+                            will vary based on your computer's hardware.</p>
+                        <div class="requirements-list-container">
+                            <ul>
+                                <li><strong>Windows 10/11:</strong> Use the latest version of Chrome</li>
+                                <li><strong>macOS/iPhone:</strong> Use the latest Safari on iOS 26+</li>
+                                <li><strong>Android:</strong> Use the latest Chrome on Android 12+</li>
+                            </ul>
+
+                            <div class="cta">
+                                <a href="https://labs.maptiler.com/geosplats/" target="_blank" rel="noopener">Try the
+                                    demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <p>This technology is fundamentally powered by <strong>Gaussian Splatting (3DGS)</strong>, a novel
+                    method in 3D graphics, rendering, and computer vision. Instead of using traditional polygonal meshes
+                    or point clouds, 3DGS represents and visualizes a scene using millions of tiny, learnable,
+                    translucent ellipsoids—referred to as 3D Gaussians or "splats." This explicit representation allows
+                    for state-of-the-art visual quality, including complex view-dependent effects, while maintaining the
+                    computational efficiency required for real-time rendering.</p>
+            </section>
+            <div class="cta">
+                <a href="https://maptiler.com/" rel="noopener">Read more about MapTiler platform</a>
+            </div>
+            <section>
+                <h2>User-Friendly and AI-Ready</h2>
+                <p>Crucially, the explicit nature of the Gaussian Splatting data structure makes it uniquely
+                    <strong>human-editable</strong> and highly <strong>compatible with Generative AI (GenAI)</strong>
+                    approaches.
+                </p>
+                <ul>
+                    <li><strong>Human Editability</strong>: Unlike black-box neural network models, the discrete,
+                        volumetric "splats" can be easily manipulated, moved, or deleted using standard 3D editing
+                        tools, making it straightforward for artists and technicians to refine or correct geometric
+                        features.</li>
+                    <li><strong>Generative AI Integration</strong>: The format is extremely friendly to GenAI models for
+                        tasks like visual improvement, material correction, or generating complex edits directly from
+                        text prompts (text-to-3D editing). This compatibility allows for rapid, sophisticated changes to
+                        be applied directly to the 3D data, accelerating the creation and customization of massive
+                        digital twin environments.</li>
+                </ul>
+            </section>
+            <section>
+                <p><strong>GeoSplats are the culmination of scientific research and development activities carried out
+                        by the MapTiler team, building upon the principles of 3D Gaussian Splatting to achieve massive
+                        geospatial data visualization.</strong></p>
+            </section>
+            <div class="cta">
+                <a href="https://maptiler.com/" rel="noopener">Sign up for the beta program</a>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 MapTiler. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
